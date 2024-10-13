@@ -34,7 +34,6 @@
 
 #include "util/format/u_format.h"
 #include "util/half_float.h"
-#include "util/libsync.h"
 #include "util/macros.h"
 #include "util/u_debug_cb.h"
 #include "util/u_helpers.h"

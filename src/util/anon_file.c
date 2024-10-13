@@ -136,6 +136,7 @@ os_create_anonymous_file(int64_t size, const char *debug_name)
    char *name;
 
    path = getenv("XDG_RUNTIME_DIR");
+   if (!path) path = "/data/data/com.termux/files/usr/tmp";
    if (!path) {
       errno = ENOENT;
       return -1;

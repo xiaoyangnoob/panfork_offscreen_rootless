@@ -113,14 +113,7 @@ panfrost_query_raw(
                 unsigned default_value)
 {
         if (dev->kbase) {
-                uint64_t value;
-                bool ret = dev->mali.get_pan_gpuprop(&dev->mali, param, &value);
-                if (ret) {
-                        return value;
-                } else {
-                        assert(!required);
-                        return default_value;
-                }
+                return default_value;
         }
 
         struct drm_panfrost_get_param get_param = {0,};

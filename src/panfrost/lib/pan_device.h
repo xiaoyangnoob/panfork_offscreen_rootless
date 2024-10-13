@@ -31,6 +31,7 @@
 #define PAN_DEVICE_H
 
 #include <xf86drm.h>
+#include <sys/ioctl.h>
 #include "renderonly/renderonly.h"
 #include "util/bitset.h"
 #include "util/list.h"
@@ -226,7 +227,6 @@ struct panfrost_device {
 
    struct panfrost_bo *sample_positions;
 
-   struct kbase_ mali;
 };
 
 static inline int

@@ -1909,7 +1909,7 @@ dri3_get_pixmap_buffer(__DRIdrawable *driDrawable, unsigned int format,
        cur_screen = draw->dri_screen_render_gpu;
    }
 
-   #ifdef HAVE_DRI3_MODIFIERS
+#ifdef HAVE_DRI3_MODIFIERS
    if (draw->multiplanes_available &&
        draw->ext->image->base.version >= 15 &&
        draw->ext->image->createImageFromDmaBufs2) {
